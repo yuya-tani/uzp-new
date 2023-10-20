@@ -1,0 +1,100 @@
+<!-- param [albumName][lmasterink][art][title1-title20][artist1-artist20][link][player] -->
+<div class="row">
+	<div class="6u 12u$(small)">
+		<div class="album-info">
+			<h3>{{ .Get `albumName` }}</h3>
+			<dl>
+				<dt>Mastering</dt>
+				<dd>
+					<span>{{ .Get `master` }}</span>
+				</dd>
+				<dt>Artwork</dt>
+				<dd>
+					<span>{{ .Get `art` }}</span>
+				</dd>
+			</dl>
+			<table>
+				<thead>
+					<tr>
+						<th>No</th>
+						<th>Title</th>
+						<th>Artist</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{ if .Get `title1` }}
+						<tr><td>1</td><td>{{ .Get `title1` }}</td><td>{{ .Get `artist1` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title2` }}
+						<tr><td>2</td><td>{{ .Get `title2` }}</td><td>{{ .Get `artist2` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title3` }}
+						<tr><td>3</td><td>{{ .Get `title3` }}</td><td>{{ .Get `artist3` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title4` }}
+						<tr><td>4</td><td>{{ .Get `title4` }}</td><td>{{ .Get `artist4` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title5` }}
+						<tr><td>5</td><td>{{ .Get `title5` }}</td><td>{{ .Get `artist5` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title6` }}
+						<tr><td>6</td><td>{{ .Get `title6` }}</td><td>{{ .Get `artist6` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title7` }}
+						<tr><td>7</td><td>{{ .Get `title7` }}</td><td>{{ .Get `artist7` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title8` }}
+						<tr><td>8</td><td>{{ .Get `title8` }}</td><td>{{ .Get `artist8` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title9` }}
+						<tr><td>9</td><td>{{ .Get `title9` }}</td><td>{{ .Get `artist9` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title10` }}
+						<tr><td>10</td><td>{{ .Get `title10` }}</td><td>{{ .Get `artist10` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title11` }}
+						<tr><td>11</td><td>{{ .Get `title11` }}</td><td>{{ .Get `artist11` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title12` }}
+						<tr><td>12</td><td>{{ .Get `title12` }}</td><td>{{ .Get `artist12` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title13` }}
+						<tr><td>13</td><td>{{ .Get `title13` }}</td><td>{{ .Get `artist13` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title14` }}
+						<tr><td>14</td><td>{{ .Get `title14` }}</td><td>{{ .Get `artist14` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title15` }}
+						<tr><td>15</td><td>{{ .Get `title15` }}</td><td>{{ .Get `artist15` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title16` }}
+						<tr><td>16</td><td>{{ .Get `title16` }}</td><td>{{ .Get `artist16` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title17` }}
+						<tr><td>17</td><td>{{ .Get `title17` }}</td><td>{{ .Get `artist17` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title18` }}
+						<tr><td>18</td><td>{{ .Get `title18` }}</td><td>{{ .Get `artist18` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title19` }}
+						<tr><td>19</td><td>{{ .Get `title19` }}</td><td>{{ .Get `artist19` }}</td></tr>
+					{{ end }}
+					{{ if .Get `title20` }}
+						<tr><td>20</td><td>{{ .Get `title20` }}</td><td>{{ .Get `artist20` }}</td></tr>
+					{{ end }}
+				</tbody>
+			</table>
+			<div class="album-sub">
+				{{ .Inner }}
+			</div>
+		</div>
+	</div>
+	<div class="6u 12u$(small)">
+		<div><a href="{{ .Get `link` }}" class="button special fit icon fa-download">Download</a></div>
+		<div class="album-player">
+			<script async type="application/javascript" src="https://embed.nicovideo.jp/watch/{{ .Get `player` }}/script?w=640&h=360"></script>
+			<noscript><a href="http://www.nicovideo.jp/watch/{{ .Get `link` }}"></a></noscript>
+		</div>
+	</div>
+</div>
+<hr />

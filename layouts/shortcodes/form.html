@@ -1,0 +1,57 @@
+<script>
+function showThxMessage(){
+	var email = document.myForm.elements['entry.425564911'].value;
+	var detail = document.myForm.elements['entry.1201483414'].value;
+	if(email !== ''){
+		if(checkJa(detail)){
+			var thxDiv = document.getElementById('thxMessage');
+			document.myForm.reset();
+			document.getElementById('formWrapper').style.display = 'none';
+			thxDiv.style.display = 'block';
+		}else{
+			alert("お問い合わせ内容は日本語で入力してください。\r\nsorry, inquiries are only accepted in Japanese.\r\nPlease translate through google translation etc. and inquire.");
+		}
+	}
+}
+
+function checkJa(txt) {
+	if (typeof txt !== "string") {
+		return false;
+	}
+	var i = txt.length,
+	escapeTxt;
+	while(i--) {
+		escapeTxt = escape(txt.substring(i, i + 1));
+		if (escapeTxt.length >= 6) {
+			return true;
+		}
+	}
+	return false;
+}
+</script>
+<div id="formWrapper">
+	<h3>お問い合わせはこちら</h3>
+	<form action="https://docs.google.com/forms/u/3/d/e/1FAIpQLScNp9vXqDznAyvvF4nK6Te2B_QJjaApB9ydHfpxzx1pk-FPhA/formResponse" method="post" name="myForm" target="dummyiframe">
+		<div>
+			<label>お名前</label>
+			<input type="text" name="entry.1187098920" value="" required />
+		</div>
+		<div>
+			<label>メールアドレス</label>
+			<input type="text" name="entry.425564911" value="" required/ >
+		</div>
+		<div>
+			<label>お問い合わせ内容</label>
+			<textarea required name="entry.1201483414"></textarea>
+		</div>
+		<div>
+			<input type="submit" value="送信">
+		</div>
+	</form>
+	<iframe name="dummyiframe" style="display:none;" onload="showThxMessage()"></iframe>
+</div>
+<div id="thxMessage" style="display:none;">
+	お問い合わせありがとうございました。<br />
+	自動返信メールをお送り致しましたのでご確認ください。<br />
+	届いていない場合は、迷惑メールとなっていないか等ご確認ください。
+</div>

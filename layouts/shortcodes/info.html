@@ -1,0 +1,39 @@
+<!-- param [place][ymd][open][close][adv][door][drink][address1][address2] -->
+<div class="row">
+	<div class="6u 12u$(small)">
+		<div class="event-info">
+			<h3>イベント情報</h3>
+			<dl>
+				<dt>会場</dt>
+				<dd>
+					<h4>{{ .Get `place` }}</h4>
+					<span class="event-address">{{ .Get `address1` }}</span><br>
+					<span class="event-address">{{ .Get `address2` }}</span>
+				</dd>
+				<dt>日時</dt>
+				<dd>
+					<span><strong>{{ .Get `ymd` }}</strong></span><br>
+					<span>〔OPEN〕<strong>{{ .Get `open` }}</strong>　〔CLOSE〕<strong>{{ .Get `close` }}</strong></span>
+				</dd>
+				<dt>入場</dt>
+				<dd>
+					{{ if .Get `adv` }}
+						<span>【前売り】 <strong>￥{{ .Get `adv` }} + 1D(￥{{ .Get `drink` }})</strong></span><br>
+						<span>【当日】　 <strong>￥{{ .Get `door` }} + 1D(￥{{ .Get `drink` }})</strong></span><br>
+						<span class="event-note">前売りは、Twitterアカウントをお持ちの方は<a href="../../adv/" style="font-weight: bold; color: deeppink; font-size:1.2em;">前売り予約ページ</a>から<br>
+						それ以外の方は、お問い合わせフォームまたは各出演者への直接予約にて承っております。</span>
+					{{ else }}
+						<span><strong>￥{{ .Get `door` }} + 1D(￥{{ .Get `drink` }})</strong></span><br>
+					{{ end }}
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="6u 12u$(small)">
+		<div class="event-map">
+			<iframe class="lazyload" src="{{ .Get `map` }}" 
+				width="450" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+<hr />

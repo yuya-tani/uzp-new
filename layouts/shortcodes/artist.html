@@ -1,0 +1,95 @@
+<!-- param [name][type][src-src2][tw1-tw6] -->
+<div class="row">
+	<div class="6u 12u$(small)">
+		<div class="artist-info">
+			<h2>{{ .Get `name` }}</h2>
+			<ul class="alt">
+				{{ if .Get `tw1` }}
+					<li><a href="https://twitter.com/{{ .Get `tw1` }}" class="icon alt fa-twitter" target="_blank" title="{{ .Get `tw1` }}">
+					<span>{{ .Get `tw1` }}</span></a></li>
+				{{ end }}
+				{{ if .Get `tw2` }}
+					<li><a href="https://twitter.com/{{ .Get `tw2` }}" class="icon alt fa-twitter" target="_blank" title="{{ .Get `tw2` }}">
+					<span>{{ .Get `tw2` }}</span></a></li>
+				{{ end }}
+				{{ if .Get `tw3` }}
+					<li><a href="https://twitter.com/{{ .Get `tw3` }}" class="icon alt fa-twitter" target="_blank" title="{{ .Get `tw3` }}">
+					<span>{{ .Get `tw3` }}</span></a></li>
+				{{ end }}
+				{{ if .Get `tw4` }}
+					<li><a href="https://twitter.com/{{ .Get `tw4` }}" class="icon alt fa-twitter" target="_blank" title="{{ .Get `tw4` }}">
+					<span>{{ .Get `tw4` }}</span></a></li>
+				{{ end }}
+				{{ if .Get `tw5` }}
+					<li><a href="https://twitter.com/{{ .Get `tw5` }}" class="icon alt fa-twitter" target="_blank" title="{{ .Get `tw5` }}">
+					<span>{{ .Get `tw5` }}</span></a></li>
+				{{ end }}
+				{{ if .Get `tw6` }}
+					<li><a href="https://twitter.com/{{ .Get `tw6` }}" class="icon alt fa-twitter" target="_blank" title="{{ .Get `tw6` }}">
+					<span>{{ .Get `tw6` }}</span></a></li>
+				{{ end }}
+				{{ if .Get `tw7` }}
+					<li><a href="https://twitter.com/{{ .Get `tw7` }}" class="icon alt fa-twitter" target="_blank" title="{{ .Get `tw7` }}">
+					<span>{{ .Get `tw7` }}</span></a></li>
+				{{ end }}
+				{{ if .Get `tw8` }}
+					<li><a href="https://twitter.com/{{ .Get `tw8` }}" class="icon alt fa-twitter" target="_blank" title="{{ .Get `tw8` }}">
+					<span>{{ .Get `tw8` }}</span></a></li>
+				{{ end }}
+				{{ if .Get `iconlink` }}
+					<li><a href="{{ .Get `iconlink` }}" class="icon alt fa-{{ .Get `icon` }}" target="_blank">
+					<span>{{ .Get `name` }}</span></a></li>
+				{{ end }}
+			</ul>
+			<span>{{ .Inner }}</span>
+		</div>
+	</div>
+	<div class="6u 12u$(small)">
+		<div class="sound">
+			<div class="embed video-player">
+			{{ $type := .Get `type` }}
+			{{ $src := .Get `src` }}
+			{{ if eq $type "youtube" }}
+				<iframe class="youtube-player lazyload" type="text/html" width="100%" height="360" 
+				data-src="https://www.youtube.com/embed/{{ $src }}" allowfullscreen frameborder="0"></iframe>
+			{{ end }}
+			{{ if eq $type "soundcloud" }}
+				<iframe class="lazyload" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
+				data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ $src }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+			{{ end }}
+			{{ if eq $type "soundcloudp" }}
+				<iframe class="lazyload" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" 
+				data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/{{ $src }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+			{{ end }}
+			{{ if eq $type "mixcloud" }}
+				<iframe class="lazyload" width="100%" height="300" 
+				data-src="https://www.mixcloud.com/widget/iframe/{{ $src }}" frameborder="0" ></iframe>
+			{{ end }}
+			{{ if eq $type "niconico" }}
+				<script async type="application/javascript" src="https://embed.nicovideo.jp/watch/{{ $src }}/script?w=640&h=360"></script>
+				<noscript><a href="http://www.nicovideo.jp/watch/{{ $src }}"></a></noscript>
+			{{ end }}
+			{{ if eq $type "bandcamp" }}
+				<iframe class="lazyload" style="border: 0; width: 100%; height: 120px;" data-src="https://bandcamp.com/EmbeddedPlayer/album={{ $src }}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless>
+				<a href="{{ .Get `src2` }}"></a></iframe>
+			{{ end }}
+			{{ if eq $type "mqube" }}
+				<div id="mqube_script_{{ .Get `src2` }}"><a target="_blank" href="https://mqube.net/play/{{ $src }}">MQubeで確認</a></div>
+				<script src="https://mqube.net/item/api.js?id=mqube_script_{{ .Get `src2` }}&code={{ $src }}" async></script>
+			{{ end }}
+			{{ if eq $type "twitter" }}
+				<blockquote class="twitter-tweet" data-theme="light">
+					<a href="https://twitter.com/miyapon_jp/status/{{ $src }}"></a>
+				</blockquote>
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			{{ end }}
+			{{ if eq $type "other" }}
+				<video src="{{ $src }}" poster="{{ .Get `src2` }}" preload="none" controls="" controlslist="nodownload" width="100%" height="300">
+					<p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+				</video>
+			{{ end }}
+			</div>
+		</div>
+	</div>
+</div>
+<hr />
