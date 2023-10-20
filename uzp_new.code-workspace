@@ -11,6 +11,7 @@
     "files.trimTrailingWhitespace": true,
     "files.exclude": {
       "**/node_modules": true,
+      "**/public": true,
       "**/.firebase": true
     }
   }

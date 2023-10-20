@@ -151,11 +151,3 @@ dribble = ""
 [languages.ja]
 weight = 0
 languageName = "Japanese"
-
-[languages.en]
-weight = 5
-languageName = "English"
-
-[languages.de]
-weight = 10
-languageName = "Deutsch"

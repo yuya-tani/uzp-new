@@ -228,7 +228,6 @@ input, select, textarea {
 		letter-spacing: 0.225em;
 		line-height: 1em;
 		margin: 0 0 1em 0;
-		text-transform: uppercase;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2467,7 +2466,6 @@ input, select, textarea {
 		padding: 0 2.75em;
 		text-align: center;
 		text-decoration: none;
-		text-transform: uppercase;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -3390,7 +3388,7 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #c42361a2;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3428,7 +3426,6 @@ input, select, textarea {
 					letter-spacing: 0.225em;
 					outline: 0;
 					text-decoration: none;
-					text-transform: uppercase;
 				}
 
 					@media screen and (max-width: 736px) {
@@ -3484,7 +3481,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease;
 		-ms-transition: background-color 0.2s ease;
 		transition: background-color 0.2s ease;
-		background: #2e3842;
+		background: #2e3842e0;
 		height: 3em;
 		left: 0;
 		line-height: 3em;
@@ -3548,7 +3545,6 @@ input, select, textarea {
 						font-size: 0.8em;
 						letter-spacing: 0.225em;
 						padding: 0 1.5em;
-						text-transform: uppercase;
 					}
 
 						#header nav > ul > li > a.menuToggle {
@@ -3621,6 +3617,8 @@ input, select, textarea {
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+		background-image: url("../../img/top.jpg");
+		background-size:cover;
 	}
 
 		#banner h2 {
@@ -3638,6 +3636,7 @@ input, select, textarea {
 			padding: 0.35em 1em;
 			position: relative;
 			z-index: 1;
+			background-color:rgba(0,0,0,0.65);
 		}
 
 			#banner h2:before, #banner h2:after {
@@ -3669,7 +3668,8 @@ input, select, textarea {
 
 		#banner p {
 			letter-spacing: 0.225em;
-			text-transform: uppercase;
+			background-color:rgba(0,0,0,0.55);
+			padding: 10px 0;
 		}
 
 			#banner p a {
@@ -3702,7 +3702,6 @@ input, select, textarea {
 			padding-left: 0.225em;
 			position: absolute;
 			text-align: center;
-			text-transform: uppercase;
 			width: 16em;
 			z-index: 1;
 		}
@@ -3853,10 +3852,10 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../img/top.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../img/top.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../img/top.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../img/top.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3872,7 +3871,6 @@ input, select, textarea {
 		#main > header p {
 			color: inherit;
 			letter-spacing: 0.225em;
-			text-transform: uppercase;
 			top: 0;
 		}
 
@@ -3947,7 +3945,6 @@ input, select, textarea {
 			letter-spacing: 0.225em;
 			list-style: none;
 			padding: 0;
-			text-transform: uppercase;
 		}
 
 			#footer .copyright li {
@@ -4003,10 +4000,10 @@ input, select, textarea {
 /* Landing */
 
 	body.landing #page-wrapper {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../img/top.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../img/top.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../img/top.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../img/top.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -4024,10 +4021,10 @@ input, select, textarea {
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../img/top.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../img/top.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../img/top.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../img/top.jpg");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
